@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		A26159F829223B26003A8CF8 /* Summar_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26159F729223B26003A8CF8 /* Summar_SwiftUIApp.swift */; };
-		A26159FA29223B26003A8CF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26159F929223B26003A8CF8 /* ContentView.swift */; };
+		A26159FA29223B26003A8CF8 /* SocailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26159F929223B26003A8CF8 /* SocailLoginView.swift */; };
 		A26159FC29223B28003A8CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A26159FB29223B28003A8CF8 /* Assets.xcassets */; };
 		A26159FF29223B28003A8CF8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A26159FE29223B28003A8CF8 /* Preview Assets.xcassets */; };
+		A2615A06292274FE003A8CF8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2615A05292274FD003A8CF8 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A26159F429223B26003A8CF8 /* Summar SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Summar SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26159F729223B26003A8CF8 /* Summar_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summar_SwiftUIApp.swift; sourceTree = "<group>"; };
-		A26159F929223B26003A8CF8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A26159F929223B26003A8CF8 /* SocailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocailLoginView.swift; sourceTree = "<group>"; };
 		A26159FB29223B28003A8CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A26159FE29223B28003A8CF8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2615A05292274FD003A8CF8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +54,10 @@
 			isa = PBXGroup;
 			children = (
 				A26159F729223B26003A8CF8 /* Summar_SwiftUIApp.swift */,
-				A26159F929223B26003A8CF8 /* ContentView.swift */,
+				A26159F929223B26003A8CF8 /* SocailLoginView.swift */,
 				A26159FB29223B28003A8CF8 /* Assets.xcassets */,
 				A26159FD29223B28003A8CF8 /* Preview Content */,
+				A2615A05292274FD003A8CF8 /* Helper.swift */,
 			);
 			path = "Summar SwiftUI";
 			sourceTree = "<group>";
@@ -137,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A26159FA29223B26003A8CF8 /* ContentView.swift in Sources */,
+				A26159FA29223B26003A8CF8 /* SocailLoginView.swift in Sources */,
 				A26159F829223B26003A8CF8 /* Summar_SwiftUIApp.swift in Sources */,
+				A2615A06292274FE003A8CF8 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

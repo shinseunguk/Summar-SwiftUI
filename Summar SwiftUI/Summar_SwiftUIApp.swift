@@ -11,7 +11,7 @@ import SwiftUI
 struct Summar_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SocailLoginView()
         }
     }
 }
