@@ -34,6 +34,8 @@
 		A2A715062923D31400E90077 /* GoogleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginManager.swift; sourceTree = "<group>"; };
 		A2A715082923D31E00E90077 /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
 		A2A7150A2923D32800E90077 /* NaverLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginManager.swift; sourceTree = "<group>"; };
+		A2A7150C2923DB5100E90077 /* Summar SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Summar SwiftUI.entitlements"; sourceTree = "<group>"; };
+		A2A7150D2923DBCC00E90077 /* Summar-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Summar-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FBB3CDDBA9FCCAC4BDFB0F61 /* Pods-Summar SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summar SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Summar SwiftUI/Pods-Summar SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,8 @@
 		A26159F629223B26003A8CF8 /* Summar SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				A2A7150D2923DBCC00E90077 /* Summar-SwiftUI-Info.plist */,
+				A2A7150C2923DB5100E90077 /* Summar SwiftUI.entitlements */,
 				A26159F729223B26003A8CF8 /* Summar_SwiftUIApp.swift */,
 				A2A714FF2923D11100E90077 /* SocialLoginManager */,
 				A284CB872923C2EF00576FC8 /* SocailLogin */,
@@ -373,12 +377,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Summar SwiftUI/Summar SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Summar SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 2D8WKJP7C4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Summar-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -404,12 +410,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Summar SwiftUI/Summar SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Summar SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 2D8WKJP7C4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Summar-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
