@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SocailLoginView: View {
+    @ObservedObject var viewModel = SocialLoginViewModel()
+    
     let screenSize = UIScreen.main.bounds.size
     
     var body: some View {
@@ -17,10 +19,9 @@ struct SocailLoginView: View {
                 .font(.title2)
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color(UIColor.summarColor1))
-                .bold(true)
             
             Spacer()
-            Button(action: {}) {
+            Button(action: {viewModel.kakaoLogin()}) {
                     Image("kakao")
                     Text("카카오톡으로 시작하기")
                         .padding(.horizontal)
@@ -30,9 +31,8 @@ struct SocailLoginView: View {
                 .foregroundColor(.black)
                 .background(Color(UIColor.kakaoColor))
                 .cornerRadius(4)
-                .bold(true)
             
-            Button(action: {}) {
+            Button(action: {viewModel.appleLogin()}) {
                     Image("apple")
                     Text("애플계정으로 시작하기")
                         .padding(.horizontal)
@@ -42,9 +42,8 @@ struct SocailLoginView: View {
                 .foregroundColor(.white)
                 .background(Color(UIColor.appleColor))
                 .cornerRadius(4)
-                .bold(true)
             
-            Button(action: {}) {
+            Button(action: {viewModel.naverLogin()}) {
                     Image("naver")
                     Text("네이버로 시작하기")
                         .padding(.horizontal)
@@ -54,9 +53,8 @@ struct SocailLoginView: View {
                 .foregroundColor(.white)
                 .background(Color(UIColor.naverColor))
                 .cornerRadius(4)
-                .bold(true)
             
-            Button(action: {}) {
+            Button(action: {viewModel.googleLogin()}) {
                 Image("google")
                 Text("구글로 시작하기")
                     .padding(.horizontal)
@@ -66,16 +64,9 @@ struct SocailLoginView: View {
                 .foregroundColor(.white)
                 .background(Color(UIColor.googleColor))
                 .cornerRadius(4)
-                .bold(true)
             
         }
-        .cornerRadius(4)
-        .padding(60)
     }
-}
-
-func buttonAction(){
-    print("buttonAction")
 }
 
 
