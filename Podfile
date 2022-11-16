@@ -6,7 +6,7 @@ target 'Summar SwiftUI' do
   use_frameworks!
 
   # Pods for Summar SwiftUI
-   pod 'Alamofire'
+   pod 'Alamofire','5.6.2'
    pod 'naveridlogin-sdk-ios'
    pod 'GoogleSignIn'
 end

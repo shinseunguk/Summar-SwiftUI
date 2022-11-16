@@ -7,64 +7,127 @@
 
 import SwiftUI
 
+let screenSize = UIScreen.main.bounds.size
+
 struct SocailLoginView: View {
     @ObservedObject var viewModel = SocialLoginViewModel()
-    
-    let screenSize = UIScreen.main.bounds.size
     
     var body: some View {
         VStack {
             Text("나만의 커리어를 위한\n써머리 만들기")
                 .lineSpacing(10)
-                .font(.title2)
+//                .font(.title2)
+                .font(.system(size: 28, weight: .bold))
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color(UIColor.summarColor1))
-            
             Spacer()
+            Image("SocialLoginImage")
+                .padding(.bottom, -15)
+                .zIndex(1)
+            KakaoBtnView()
+                .zIndex(0)
+            AppleBtnView()
+                .padding(.top, 5)
+            NaverBtnView()
+                .padding(.top, 5)
+            GoogleBtnView()
+                .padding(.top, 5)
+                .padding(.bottom, 50)
+        }
+        .padding(50)
+    }
+}
+
+fileprivate struct KakaoBtnView: View {
+    @ObservedObject var viewModel = SocialLoginViewModel()
+    
+    let screenSize = UIScreen.main.bounds.size
+    
+    var body: some View{
+        VStack{
             Button(action: {viewModel.kakaoLogin()}) {
                     Image("kakao")
                     Text("카카오톡으로 시작하기")
-                        .padding(.horizontal)
+                        .padding(.horizontal, 80)
+                        .font(.system(size: 18, weight: .bold))
                 }
-                .padding()
-                .frame(width: screenSize.width - 50,height: 62, alignment: .center)
-                .foregroundColor(.black)
-                .background(Color(UIColor.kakaoColor))
-                .cornerRadius(4)
-            
+//            .padding()
+            .frame(width: screenSize.width - 50,height: 55, alignment: .center)
+            .foregroundColor(.black)
+            .background(Color(UIColor.kakaoColor))
+            .cornerRadius(4)
+        }
+    }
+}
+
+fileprivate struct AppleBtnView: View {
+    @ObservedObject var viewModel = SocialLoginViewModel()
+    
+    var body: some View{
+        VStack{
             Button(action: {viewModel.appleLogin()}) {
                     Image("apple")
                     Text("애플계정으로 시작하기")
-                        .padding(.horizontal)
+                        .padding(.horizontal, 80)
+                        .font(.system(size: 18, weight: .bold))
                 }
                 .padding()
-                .frame(width: screenSize.width - 50,height: 62, alignment: .center)
+                .frame(width: screenSize.width - 50,height: 55, alignment: .center)
                 .foregroundColor(.white)
                 .background(Color(UIColor.appleColor))
                 .cornerRadius(4)
-            
+        }
+    }
+}
+
+fileprivate struct NaverBtnView: View {
+    @ObservedObject var viewModel = SocialLoginViewModel()
+    
+    init(){
+        print(screenSize.width - 50)
+    }
+    var body: some View{
+        VStack{
             Button(action: {viewModel.naverLogin()}) {
                     Image("naver")
                     Text("네이버로 시작하기")
-                        .padding(.horizontal)
+                        .frame(width: screenSize.width - 50, height: 30, alignment: .center)
+//                        .padding(.horizontal, 80)
+//                        .padding(.vertical)
+                        .font(.system(size: 18, weight: .bold))
+                        .border(.black)
                 }
                 .padding()
-                .frame(width: screenSize.width - 50,height: 62, alignment: .center)
+                .frame(width: screenSize.width - 50,height: 55, alignment: .center)
                 .foregroundColor(.white)
                 .background(Color(UIColor.naverColor))
                 .cornerRadius(4)
-            
+        }
+    }
+}
+
+fileprivate struct GoogleBtnView: View {
+    @ObservedObject var viewModel = SocialLoginViewModel()
+    
+    var body: some View{
+        VStack{
             Button(action: {viewModel.googleLogin()}) {
-                Image("google")
+                HStack{
+                    Image("google")
+                }
+                .border(.red)
+                
                 Text("구글로 시작하기")
-                    .padding(.horizontal)
+                    .padding(.horizontal, 80)
+                    .font(.system(size: 18, weight: .bold))
+                    .border(.black)
                 }
                 .padding()
-                .frame(width: screenSize.width - 50,height: 62, alignment: .center)
+                .frame(width: screenSize.width - 50,height: 55, alignment: .center)
                 .foregroundColor(.white)
                 .background(Color(UIColor.googleColor))
                 .cornerRadius(4)
-            
+                .border(.black)
         }
     }
 }
