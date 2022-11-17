@@ -16,10 +16,10 @@ struct SocailLoginView: View {
         VStack {
             Text("나만의 커리어를 위한\n써머리 만들기")
                 .lineSpacing(10)
-//                .font(.title2)
                 .font(.system(size: 28, weight: .bold))
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color(UIColor.summarColor1))
+                .padding(.top, 20)
             Spacer()
             Image("SocialLoginImage")
                 .padding(.bottom, -15)
@@ -34,7 +34,7 @@ struct SocailLoginView: View {
                 .padding(.top, 5)
                 .padding(.bottom, 50)
         }
-        .padding(50)
+        .padding(20)
     }
 }
 
@@ -48,7 +48,7 @@ fileprivate struct KakaoBtnView: View {
             Button(action: {viewModel.kakaoLogin()}) {
                     Image("kakao")
                     Text("카카오톡으로 시작하기")
-                        .padding(.horizontal, 80)
+                        .frame(width: screenSize.width - 120, height: 30, alignment: .center)
                         .font(.system(size: 18, weight: .bold))
                 }
 //            .padding()
@@ -68,8 +68,8 @@ fileprivate struct AppleBtnView: View {
             Button(action: {viewModel.appleLogin()}) {
                     Image("apple")
                     Text("애플계정으로 시작하기")
-                        .padding(.horizontal, 80)
-                        .font(.system(size: 18, weight: .bold))
+                    .frame(width: screenSize.width - 120, height: 30, alignment: .center)
+                    .font(.system(size: 18, weight: .bold))
                 }
                 .padding()
                 .frame(width: screenSize.width - 50,height: 55, alignment: .center)
@@ -91,11 +91,8 @@ fileprivate struct NaverBtnView: View {
             Button(action: {viewModel.naverLogin()}) {
                     Image("naver")
                     Text("네이버로 시작하기")
-                        .frame(width: screenSize.width - 50, height: 30, alignment: .center)
-//                        .padding(.horizontal, 80)
-//                        .padding(.vertical)
+                        .frame(width: screenSize.width - 120, height: 30, alignment: .center)
                         .font(.system(size: 18, weight: .bold))
-                        .border(.black)
                 }
                 .padding()
                 .frame(width: screenSize.width - 50,height: 55, alignment: .center)
@@ -118,16 +115,14 @@ fileprivate struct GoogleBtnView: View {
                 .border(.red)
                 
                 Text("구글로 시작하기")
-                    .padding(.horizontal, 80)
+                    .frame(width: screenSize.width - 120, height: 30, alignment: .center)
                     .font(.system(size: 18, weight: .bold))
-                    .border(.black)
                 }
                 .padding()
                 .frame(width: screenSize.width - 50,height: 55, alignment: .center)
                 .foregroundColor(.white)
                 .background(Color(UIColor.googleColor))
                 .cornerRadius(4)
-                .border(.black)
         }
     }
 }
