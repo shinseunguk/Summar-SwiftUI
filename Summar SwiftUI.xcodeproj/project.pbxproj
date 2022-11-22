@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C9C2C019239541C353359E1 /* Pods_Summar_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D0D54E877A7CBAEC38DE8 /* Pods_Summar_SwiftUI.framework */; };
+		A21EA644292D025800F26022 /* NaverLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EA643292D025800F26022 /* NaverLoginAPI.swift */; };
+		A21EA646292D027D00F26022 /* NaverLoginDelegateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EA645292D027D00F26022 /* NaverLoginDelegateObserver.swift */; };
 		A26159F829223B26003A8CF8 /* Summar_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26159F729223B26003A8CF8 /* Summar_SwiftUIApp.swift */; };
 		A26159FA29223B26003A8CF8 /* SocailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26159F929223B26003A8CF8 /* SocailLoginView.swift */; };
 		A26159FC29223B28003A8CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A26159FB29223B28003A8CF8 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		05A66A01ECFD480896804199 /* Pods-Summar SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summar SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Summar SwiftUI/Pods-Summar SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		563D0D54E877A7CBAEC38DE8 /* Pods_Summar_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summar_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A21EA643292D025800F26022 /* NaverLoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginAPI.swift; sourceTree = "<group>"; };
+		A21EA645292D027D00F26022 /* NaverLoginDelegateObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginDelegateObserver.swift; sourceTree = "<group>"; };
 		A26159F429223B26003A8CF8 /* Summar SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Summar SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26159F729223B26003A8CF8 /* Summar_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summar_SwiftUIApp.swift; sourceTree = "<group>"; };
 		A26159F929223B26003A8CF8 /* SocailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocailLoginView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				A2A715062923D31400E90077 /* GoogleLoginManager.swift */,
 				A2A715082923D31E00E90077 /* KakaoLoginManager.swift */,
 				A2A7150A2923D32800E90077 /* NaverLoginManager.swift */,
+				A21EA643292D025800F26022 /* NaverLoginAPI.swift */,
+				A21EA645292D027D00F26022 /* NaverLoginDelegateObserver.swift */,
 			);
 			path = SocialLoginManager;
 			sourceTree = "<group>";
@@ -246,10 +252,12 @@
 				A26159FA29223B26003A8CF8 /* SocailLoginView.swift in Sources */,
 				A2A715092923D31E00E90077 /* KakaoLoginManager.swift in Sources */,
 				A2A7150B2923D32800E90077 /* NaverLoginManager.swift in Sources */,
+				A21EA644292D025800F26022 /* NaverLoginAPI.swift in Sources */,
 				A2A715052923D28B00E90077 /* AppleLoginManager.swift in Sources */,
 				A2A715072923D31400E90077 /* GoogleLoginManager.swift in Sources */,
 				A284CB862923C01100576FC8 /* SocialLoginViewModel.swift in Sources */,
 				A26159F829223B26003A8CF8 /* Summar_SwiftUIApp.swift in Sources */,
+				A21EA646292D027D00F26022 /* NaverLoginDelegateObserver.swift in Sources */,
 				A2615A06292274FE003A8CF8 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

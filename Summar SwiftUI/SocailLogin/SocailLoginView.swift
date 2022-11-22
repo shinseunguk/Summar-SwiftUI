@@ -88,7 +88,9 @@ fileprivate struct NaverBtnView: View {
     }
     var body: some View{
         VStack{
-            Button(action: {viewModel.naverLogin()}) {
+            Button(action: {NaverVCRepresentable{ email in
+                print("네이버 로그인 결과 => \(email)")
+            }}) {
                     Image("naver")
                     Text("네이버로 시작하기")
                         .frame(width: screenSize.width - 120, height: 30, alignment: .center)

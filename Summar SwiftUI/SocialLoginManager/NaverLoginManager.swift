@@ -17,13 +17,7 @@ class NaverLoginManager: NSObject {
     
     override init() {
         super.init()
-        print("naver init()")
         naverLoginInstance?.requestDeleteToken() // 배포시 주석
-        
-        naverLoginInstance?.serviceUrlScheme = "Summar"
-        naverLoginInstance?.consumerKey = "vhRSDiuXtzI9d8oPXZL6"
-        naverLoginInstance?.consumerSecret = "Jop9G0kyP8"
-        naverLoginInstance?.appName = "Summar"
     }
     
     func naverLogin() {
