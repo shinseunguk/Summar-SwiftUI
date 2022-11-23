@@ -83,14 +83,9 @@ fileprivate struct AppleBtnView: View {
 fileprivate struct NaverBtnView: View {
     @ObservedObject var viewModel = SocialLoginViewModel()
     
-    init(){
-        print(screenSize.width - 50)
-    }
     var body: some View{
         VStack{
-            Button(action: {NaverVCRepresentable{ email in
-                print("네이버 로그인 결과 => \(email)")
-            }}) {
+            Button(action: {viewModel.naverLogin()}) {
                     Image("naver")
                     Text("네이버로 시작하기")
                         .frame(width: screenSize.width - 120, height: 30, alignment: .center)
@@ -106,11 +101,11 @@ fileprivate struct NaverBtnView: View {
 }
 
 fileprivate struct GoogleBtnView: View {
-    @ObservedObject var viewModel = SocialLoginViewModel()
+    @ObservedObject var googleAuth = GoogleLoginManager()
     
     var body: some View{
         VStack{
-            Button(action: {viewModel.googleLogin()}) {
+            Button(action: {googleAuth.signIn()}) {
                 HStack{
                     Image("google")
                 }

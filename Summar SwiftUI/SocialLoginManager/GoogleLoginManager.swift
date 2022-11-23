@@ -5,47 +5,81 @@
 //  Created by ukBook on 2022/11/15.
 //
 
-import Foundation
+import SwiftUI
 import GoogleSignIn
 
-class GoogleLoginManager: NSObject {
-    func googleLogin() {
-//        GIDSignIn.sharedInstance.presentingViewController = self
-//        GIDSignIn.sharedInstance.delegate = self
-//        googleSignInButton.style = .standard // .wide .iconOnly
+class GoogleLoginManager: ObservableObject {
+    
+    @Published var givenName: String = ""
+    @Published var profilePicUrl: String = ""
+    @Published var isLoggedIn: Bool = false
+    @Published var errorMessage: String = ""
+    @Published var email: String = ""
+    @Published var userID: String = ""
+    
+    init(){
+        check()
     }
     
-    // 연동을 시도 했을때 불러오는 메소드
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            if (error as NSError).code == GIDSignInError.hasNoAuthInKeychain.rawValue {
-                print("The user has not signed in before or they have since signed out.")
-            } else {
-                print("\(error.localizedDescription)")
-            }
-            return
-        }
+    func checkStatus(){
+        print(#function)
+        if(GIDSignIn.sharedInstance.currentUser != nil){
+            let user = GIDSignIn.sharedInstance.currentUser
             
-        // 사용자 정보 가져오기
-        if let userId = user.userID,                  // For client-side use only!
-            let idToken = user.authentication.idToken, // Safe to send to the server
-            let fullName = user.profile?.name,
-            let givenName = user.profile?.givenName,
-            let familyName = user.profile?.familyName,
-            let email = user.profile?.email {
-                
-            print("Token : \(idToken)")
-            print("User ID : \(userId)")
-            print("User Email : \(email)")
-            print("User Name : \((fullName))")
-
-        } else {
-            print("Error : User Data Not Found")
+            guard let user = user else { return }
+//            let givenName = user.profile?.givenName
+            let profilePicUrl = user.profile!.imageURL(withDimension: 100)!.absoluteString
+            let email = user.profile?.email
+            let userId = user.userID
+            
+            self.userID = userId ?? "unknown"
+            self.email = email ?? "unknown@gmail.com"
+            self.profilePicUrl = profilePicUrl
+            
+            self.isLoggedIn = true
+            
+            print(self.userID)
+            print(self.email)
+            print(self.profilePicUrl)
+            
+        }else{
+            self.isLoggedIn = false
+            self.userID = "unknown"
+            self.email = "unknown@gmail.com"
+            self.profilePicUrl =  ""
         }
     }
+    
+    func check(){
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            if let error = error {
+                self.errorMessage = "error: \(error.localizedDescription)"
+            }
+            
+            self.checkStatus()
+        }
+    }
+    
+    func signIn(){
+        print(#function)
         
-    // 구글 로그인 연동 해제했을때 불러오는 메소드
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        print("Disconnect")
+       guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {return}
+        
+        let signInConfig = GIDConfiguration.init(clientID: "889837360140-2coemapf7ok8b2hbasf55s8rt01o7n90.apps.googleusercontent.com")
+        GIDSignIn.sharedInstance.signIn(
+            with: signInConfig,
+            presenting: presentingViewController,
+            callback: { user, error in
+                if let error = error {
+                    self.errorMessage = "error: \(error.localizedDescription)"
+                }
+                self.checkStatus()
+            }
+        )
+    }
+    
+    func signOut(){
+        GIDSignIn.sharedInstance.signOut()
+        self.checkStatus()
     }
 }

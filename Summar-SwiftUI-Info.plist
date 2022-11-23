@@ -5,12 +5,11 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>Summar</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>com.googleusercontent.apps.889837360140-2coemapf7ok8b2hbasf55s8rt01o7n90</string>
 				<string>Summar</string>
 			</array>
 		</dict>

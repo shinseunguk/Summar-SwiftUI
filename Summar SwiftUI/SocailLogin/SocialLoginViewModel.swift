@@ -38,7 +38,7 @@ class SocialLoginViewModel: ObservableObject {
     
     func naverLogin() {
         print(#function)
-//        naverLoginM.naverLogin()
+        naverLoginM.naverLogin()
     }
     
     func googleLogin() {
