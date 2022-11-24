@@ -14,11 +14,47 @@ PODS:
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 3.0, >= 1.5)
   - GTMSessionFetcher/Core (2.3.0)
+  - KakaoSDK (2.11.3):
+    - KakaoSDKAuth (= 2.11.3)
+    - KakaoSDKCommon (= 2.11.3)
+    - KakaoSDKFriend (= 2.11.3)
+    - KakaoSDKNavi (= 2.11.3)
+    - KakaoSDKShare (= 2.11.3)
+    - KakaoSDKStory (= 2.11.3)
+    - KakaoSDKTalk (= 2.11.3)
+    - KakaoSDKTemplate (= 2.11.3)
+    - KakaoSDKUser (= 2.11.3)
+  - KakaoSDKAuth (2.11.3):
+    - KakaoSDKCommon (= 2.11.3)
+  - KakaoSDKCommon (2.11.3):
+    - KakaoSDKCommon/Common (= 2.11.3)
+    - KakaoSDKCommon/Network (= 2.11.3)
+  - KakaoSDKCommon/Common (2.11.3)
+  - KakaoSDKCommon/Network (2.11.3):
+    - Alamofire (~> 5.1)
+    - KakaoSDKCommon/Common (= 2.11.3)
+  - KakaoSDKFriend (2.11.3):
+    - KakaoSDKUser (= 2.11.3)
+  - KakaoSDKNavi (2.11.3):
+    - KakaoSDKCommon/Common (= 2.11.3)
+  - KakaoSDKShare (2.11.3):
+    - KakaoSDKCommon (= 2.11.3)
+    - KakaoSDKTemplate (= 2.11.3)
+  - KakaoSDKStory (2.11.3):
+    - KakaoSDKUser (= 2.11.3)
+  - KakaoSDKTalk (2.11.3):
+    - KakaoSDKTemplate (= 2.11.3)
+    - KakaoSDKUser (= 2.11.3)
+  - KakaoSDKTemplate (2.11.3):
+    - KakaoSDKCommon/Common (= 2.11.3)
+  - KakaoSDKUser (2.11.3):
+    - KakaoSDKAuth (= 2.11.3)
   - naveridlogin-sdk-ios (4.1.5)
 
 DEPENDENCIES:
   - Alamofire (= 5.6.2)
   - GoogleSignIn
+  - KakaoSDK
   - naveridlogin-sdk-ios
 
 SPEC REPOS:
@@ -28,6 +64,16 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - KakaoSDK
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKFriend
+    - KakaoSDKNavi
+    - KakaoSDKShare
+    - KakaoSDKStory
+    - KakaoSDKTalk
+    - KakaoSDKTemplate
+    - KakaoSDKUser
     - naveridlogin-sdk-ios
 
 SPEC CHECKSUMS:
@@ -36,8 +82,18 @@ SPEC CHECKSUMS:
   GoogleSignIn: 5651ce3a61e56ca864160e79b484cd9ed3f49b7a
   GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
   GTMSessionFetcher: 3a63d75eecd6aa32c2fc79f578064e1214dfdec2
+  KakaoSDK: 7ebf1862d9f9014e402eb756b2d906a60c092661
+  KakaoSDKAuth: a64dde90516e18fdfc35b83bbad2677c3675c329
+  KakaoSDKCommon: b4235203f67a5b6ee2df75eaf9bbc863c6d92e09
+  KakaoSDKFriend: 0babeed5e025207a518a53fee08b7e369c009238
+  KakaoSDKNavi: 5168499579e915cf87c5f715b8de3c0706e310a3
+  KakaoSDKShare: 1a43689303e049a9b61a10e079ddb66e6e4a9806
+  KakaoSDKStory: d932e8a4a2d2ad9ca04b789aacb510eb65865c84
+  KakaoSDKTalk: f20736b6016c25b136cfc62b1949dc15686a2751
+  KakaoSDKTemplate: 295e57cf2826bc2cbdaf2c37e1ee62e69ea58d74
+  KakaoSDKUser: 9a42e9b74855ce876b071c841418aa6726534010
   naveridlogin-sdk-ios: 4351fe7162cd6b8b6dbb37bd7cc205304fa1d889
 
-PODFILE CHECKSUM: 8fd294a03bdb9d2b3c5b50729ce0599727d7764a
+PODFILE CHECKSUM: e131fa1ec2f8557536543054c16ccacbc169db8c
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.10.2

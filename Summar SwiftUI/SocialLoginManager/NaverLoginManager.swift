@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import NaverThirdPartyLogin
+//import NaverThirdPartyLogin
 import Alamofire
 
 class NaverLoginManager: NSObject {
