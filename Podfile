@@ -9,5 +9,7 @@ target 'Summar SwiftUI' do
    pod 'Alamofire','5.6.2'
    pod 'naveridlogin-sdk-ios'
    pod 'GoogleSignIn'
-   pod 'KakaoSDK'
+   pod 'KakaoSDKUser'
+   pod 'KakaoSDKAuth'
+   pod 'KakaoSDKCommon'
 end

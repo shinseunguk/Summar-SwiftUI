@@ -13,13 +13,14 @@ import KakaoSDKAuth
 struct Summar_SwiftUIApp: App {
     
     init() {
+        print("init")
         // Kakao SDK 초기화
         KakaoSDK.initSDK(appKey: "c82291c69573fe735c2c917069993cd9")
     }
     
     var body: some Scene {
         WindowGroup {
-            SocailLoginView()
+            SocialLoginView()
                 .onOpenURL { url in
                     if (AuthApi.isKakaoTalkLoginUrl(url)){
                         _ = AuthController.handleOpenUrl(url: url)

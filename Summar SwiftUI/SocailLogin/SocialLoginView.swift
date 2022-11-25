@@ -9,9 +9,7 @@ import SwiftUI
 
 let screenSize = UIScreen.main.bounds.size
 
-struct SocailLoginView: View {
-    @ObservedObject var viewModel = SocialLoginViewModel()
-    
+struct SocialLoginView: View {
     var body: some View {
         VStack {
             Text("나만의 커리어를 위한\n써머리 만들기")
@@ -39,13 +37,13 @@ struct SocailLoginView: View {
 }
 
 fileprivate struct KakaoBtnView: View {
-    @ObservedObject var viewModel = SocialLoginViewModel()
+    @ObservedObject var kakaoAuth = KakaoLoginManager()
     
     let screenSize = UIScreen.main.bounds.size
     
     var body: some View{
         VStack{
-            Button(action: {viewModel.kakaoLogin()}) {
+            Button(action: {kakaoAuth.kakaoLogin()}) {
                     Image("kakao")
                     Text("카카오톡으로 시작하기")
                         .frame(width: screenSize.width - 120, height: 30, alignment: .center)
@@ -61,11 +59,9 @@ fileprivate struct KakaoBtnView: View {
 }
 
 fileprivate struct AppleBtnView: View {
-    @ObservedObject var viewModel = SocialLoginViewModel()
-    
     var body: some View{
         VStack{
-            Button(action: {viewModel.appleLogin()}) {
+            Button(action: {}) {
                     Image("apple")
                     Text("애플계정으로 시작하기")
                     .frame(width: screenSize.width - 120, height: 30, alignment: .center)
@@ -81,11 +77,10 @@ fileprivate struct AppleBtnView: View {
 }
 
 fileprivate struct NaverBtnView: View {
-    @ObservedObject var viewModel = SocialLoginViewModel()
     
     var body: some View{
         VStack{
-            Button(action: {viewModel.naverLogin()}) {
+            Button(action: {}) {
                     Image("naver")
                     Text("네이버로 시작하기")
                         .frame(width: screenSize.width - 120, height: 30, alignment: .center)
@@ -127,6 +122,6 @@ fileprivate struct GoogleBtnView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SocailLoginView()
+        SocialLoginView()
     }
 }

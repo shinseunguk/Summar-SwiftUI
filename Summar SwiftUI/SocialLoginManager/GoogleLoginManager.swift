@@ -54,6 +54,7 @@ class GoogleLoginManager: ObservableObject {
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if let error = error {
                 self.errorMessage = "error: \(error.localizedDescription)"
+                print("error: \(error.localizedDescription)")
             }
             
             self.checkStatus()
