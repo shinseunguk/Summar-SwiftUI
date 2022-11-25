@@ -33,6 +33,7 @@ struct SocialLoginView: View {
                 .padding(.bottom, 50)
         }
         .padding(20)
+        .background(Color.white)
     }
 }
 
@@ -59,9 +60,11 @@ fileprivate struct KakaoBtnView: View {
 }
 
 fileprivate struct AppleBtnView: View {
+    var appleAuth = AppleLoginManager()
+    
     var body: some View{
         VStack{
-            Button(action: {}) {
+            Button(action: {appleAuth.appleLogin()}) {
                     Image("apple")
                     Text("애플계정으로 시작하기")
                     .frame(width: screenSize.width - 120, height: 30, alignment: .center)
@@ -77,10 +80,10 @@ fileprivate struct AppleBtnView: View {
 }
 
 fileprivate struct NaverBtnView: View {
-    
+    var naverAuth = NaverLoginManager()
     var body: some View{
         VStack{
-            Button(action: {}) {
+            Button(action: {naverAuth.naverLogin()}) {
                     Image("naver")
                     Text("네이버로 시작하기")
                         .frame(width: screenSize.width - 120, height: 30, alignment: .center)

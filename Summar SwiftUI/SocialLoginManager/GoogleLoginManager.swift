@@ -27,7 +27,6 @@ class GoogleLoginManager: ObservableObject {
             let user = GIDSignIn.sharedInstance.currentUser
             
             guard let user = user else { return }
-//            let givenName = user.profile?.givenName
             let profilePicUrl = user.profile!.imageURL(withDimension: 100)!.absoluteString
             let email = user.profile?.email
             let userId = user.userID
