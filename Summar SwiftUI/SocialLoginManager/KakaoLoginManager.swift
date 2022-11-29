@@ -10,6 +10,9 @@ import KakaoSDKAuth
 import KakaoSDKUser
 
 class KakaoLoginManager : ObservableObject {
+    @Published var SignUpBool = false
+    @Published var GoHomeBool = false
+    
     func kakaoLogin() {
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
@@ -31,6 +34,7 @@ class KakaoLoginManager : ObservableObject {
             if let id = User?.id {
 //                userName = name
                 print("id => ", id)
+                self.SignUpBool = true
             }
             
              if let name = User?.kakaoAccount?.profile?.nickname {

@@ -18,10 +18,10 @@ struct Summar_SwiftUIApp: App {
         // Kakao SDK 초기화
         KakaoSDK.initSDK(appKey: "c82291c69573fe735c2c917069993cd9")
         
-        NaverThirdPartyLoginConnection.getSharedInstance()?.serviceUrlScheme = "Summar"
-        NaverThirdPartyLoginConnection.getSharedInstance()?.consumerKey = "vhRSDiuXtzI9d8oPXZL6"
-        NaverThirdPartyLoginConnection.getSharedInstance()?.consumerSecret = "Jop9G0kyP8"
-        NaverThirdPartyLoginConnection.getSharedInstance()?.appName = "Summar"
+//        NaverThirdPartyLoginConnection.getSharedInstance()?.serviceUrlScheme = "Summar"
+//        NaverThirdPartyLoginConnection.getSharedInstance()?.consumerKey = "vhRSDiuXtzI9d8oPXZL6"
+//        NaverThirdPartyLoginConnection.getSharedInstance()?.consumerSecret = "Jop9G0kyP8"
+//        NaverThirdPartyLoginConnection.getSharedInstance()?.appName = "Summar"
     }
     
     var body: some Scene {

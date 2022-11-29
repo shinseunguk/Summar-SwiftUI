@@ -11,29 +11,31 @@ let screenSize = UIScreen.main.bounds.size
 
 struct SocialLoginView: View {
     var body: some View {
-        VStack {
-            Text("나만의 커리어를 위한\n써머리 만들기")
-                .lineSpacing(10)
-                .font(.system(size: 28, weight: .bold))
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color(UIColor.summarColor1))
-                .padding(.top, 20)
-            Spacer()
-            Image("SocialLoginImage")
-                .padding(.bottom, -15)
-                .zIndex(1)
-            KakaoBtnView()
-                .zIndex(0)
-            AppleBtnView()
-                .padding(.top, 5)
-            NaverBtnView()
-                .padding(.top, 5)
-            GoogleBtnView()
-                .padding(.top, 5)
-                .padding(.bottom, 50)
+        NavigationView{
+            VStack {
+                Text("나만의 커리어를 위한\n써머리 만들기")
+                    .lineSpacing(10)
+                    .font(.system(size: 28, weight: .bold))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color(UIColor.summarColor1))
+                    .padding(.top, 20)
+                Spacer()
+                Image("SocialLoginImage")
+                    .padding(.bottom, -15)
+                    .zIndex(1)
+                KakaoBtnView()
+                    .zIndex(0)
+                AppleBtnView()
+                    .padding(.top, 5)
+                NaverBtnView()
+                    .padding(.top, 5)
+                GoogleBtnView()
+                    .padding(.top, 5)
+                    .padding(.bottom, 50)
+            }
+            .padding(20)
+            .background(Color.white)
         }
-        .padding(20)
-        .background(Color.white)
     }
 }
 
@@ -56,6 +58,8 @@ fileprivate struct KakaoBtnView: View {
             .background(Color(UIColor.kakaoColor))
             .cornerRadius(4)
         }
+        NavigationLink(destination: HomeView(), isActive: self.$kakaoAuth.SignUpBool) {}
+        NavigationLink(destination: HomeView(), isActive: self.$kakaoAuth.GoHomeBool) {Spacer()}
     }
 }
 

@@ -10,6 +10,10 @@
 		506C8160E5AD1F86AA0BEEE0 /* Pods_Summar_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64DCF48F43BA8A8D5E5C266 /* Pods_Summar_SwiftUI.framework */; };
 		A21EA644292D025800F26022 /* NaverLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EA643292D025800F26022 /* NaverLoginAPI.swift */; };
 		A21EA646292D027D00F26022 /* NaverLoginDelegateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EA645292D027D00F26022 /* NaverLoginDelegateObserver.swift */; };
+		A21EA64D2934BCEE00F26022 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EA64C2934BCEE00F26022 /* HomeView.swift */; };
+		A21EA6512934C37B00F26022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EA6502934C37B00F26022 /* AppDelegate.swift */; };
+		A21EA6532934C3B300F26022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EA6522934C3B300F26022 /* SceneDelegate.swift */; };
+		A21EA65629364FB500F26022 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21EA65529364FB500F26022 /* SignUpView.swift */; };
 		A26159F829223B26003A8CF8 /* Summar_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26159F729223B26003A8CF8 /* Summar_SwiftUIApp.swift */; };
 		A26159FA29223B26003A8CF8 /* SocialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26159F929223B26003A8CF8 /* SocialLoginView.swift */; };
 		A26159FC29223B28003A8CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A26159FB29223B28003A8CF8 /* Assets.xcassets */; };
@@ -26,6 +30,10 @@
 		3AAF760C7992843F2599A9E0 /* Pods-Summar SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summar SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Summar SwiftUI/Pods-Summar SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		A21EA643292D025800F26022 /* NaverLoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginAPI.swift; sourceTree = "<group>"; };
 		A21EA645292D027D00F26022 /* NaverLoginDelegateObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginDelegateObserver.swift; sourceTree = "<group>"; };
+		A21EA64C2934BCEE00F26022 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A21EA6502934C37B00F26022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A21EA6522934C3B300F26022 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A21EA65529364FB500F26022 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A26159F429223B26003A8CF8 /* Summar SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Summar SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26159F729223B26003A8CF8 /* Summar_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summar_SwiftUIApp.swift; sourceTree = "<group>"; };
 		A26159F929223B26003A8CF8 /* SocialLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginView.swift; sourceTree = "<group>"; };
@@ -61,6 +69,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A21EA6492934BCCC00F26022 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A21EA64C2934BCEE00F26022 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A21EA65429364F9C00F26022 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A21EA65529364FB500F26022 /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		A26159EB29223B26003A8CF8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +109,10 @@
 				A2A7150D2923DBCC00E90077 /* Summar-SwiftUI-Info.plist */,
 				A2A7150C2923DB5100E90077 /* Summar SwiftUI.entitlements */,
 				A26159F729223B26003A8CF8 /* Summar_SwiftUIApp.swift */,
+				A21EA6502934C37B00F26022 /* AppDelegate.swift */,
+				A21EA6522934C3B300F26022 /* SceneDelegate.swift */,
+				A21EA65429364F9C00F26022 /* SignUp */,
+				A21EA6492934BCCC00F26022 /* Home */,
 				A2A714FF2923D11100E90077 /* SocialLoginManager */,
 				A284CB872923C2EF00576FC8 /* SocailLogin */,
 				A26159FB29223B28003A8CF8 /* Assets.xcassets */,
@@ -246,12 +274,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A21EA6512934C37B00F26022 /* AppDelegate.swift in Sources */,
 				A26159FA29223B26003A8CF8 /* SocialLoginView.swift in Sources */,
 				A2A715092923D31E00E90077 /* KakaoLoginManager.swift in Sources */,
 				A2A7150B2923D32800E90077 /* NaverLoginManager.swift in Sources */,
+				A21EA64D2934BCEE00F26022 /* HomeView.swift in Sources */,
 				A21EA644292D025800F26022 /* NaverLoginAPI.swift in Sources */,
 				A2A715052923D28B00E90077 /* AppleLoginManager.swift in Sources */,
 				A2A715072923D31400E90077 /* GoogleLoginManager.swift in Sources */,
+				A21EA65629364FB500F26022 /* SignUpView.swift in Sources */,
+				A21EA6532934C3B300F26022 /* SceneDelegate.swift in Sources */,
 				A26159F829223B26003A8CF8 /* Summar_SwiftUIApp.swift in Sources */,
 				A21EA646292D027D00F26022 /* NaverLoginDelegateObserver.swift in Sources */,
 				A2615A06292274FE003A8CF8 /* Helper.swift in Sources */,
